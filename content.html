@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Art Gallery - Sean Truong</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-right: 15px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .content-section {
+            padding: 120px 0 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 15px auto;
+        }
+
+        .ai-art-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .ai-art-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .ai-art-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .ai-art-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .ai-art-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .ai-art-caption {
+            padding: 15px;
+            background-color: white;
+        }
+
+        .ai-art-caption h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .ai-art-gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ST</div>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#experience">Experience</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- AI Art Gallery Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">AI Art Gallery</h2>
+            <p style="text-align: center; margin-bottom: 30px;">A collection of stunning AI-generated artwork showcasing the creative capabilities of artificial intelligence.</p>
+
+            <div class="ai-art-gallery">
+                <div class="ai-art-item">
+                    <img src="ai1.webp" alt="AI Generated Art 1">
+                    <div class="ai-art-caption">
+                        <h3>Digital Dreams</h3>
+                        <p>AI-generated abstract landscape inspired by surrealism and digital art movements.</p>
+                    </div>
+                </div>
+                <div class="ai-art-item">
+                    <img src="ai2.webp" alt="AI Generated Art 2">
+                    <div class="ai-art-caption">
+                        <h3>Neural Visions</h3>
+                        <p>Created using a style transfer algorithm trained on contemporary artwork.</p>
+                    </div>
+                </div>
+                <div class="ai-art-item">
+                    <img src="ai3.webp" alt="AI Generated Art 3">
+                    <div class="ai-art-caption">
+                        <h3>Synthetic Imagination</h3>
+                        <p>Generated by an AI model that combines elements from thousands of artistic references.</p>
+                    </div>
+                </div>
+                <div class="ai-art-item">
+                    <img src="ai4.webp" alt="AI Generated Art 4">
+                    <div class="ai-art-caption">
+                        <h3>Machine Creativity</h3>
+                        <p>The result of a generative adversarial network trained on modern art collections.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-to-home">
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sean Truong. All Rights Reserved. | AI Art Gallery</p>
+        </div>
+    </footer>
+</body>
+</html>
